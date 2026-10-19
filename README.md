@@ -25,6 +25,50 @@ Arduino Uno로 LED, 가변저항, 버튼, 인터럽트, 네오픽셀을 다뤄 �
 
 ---
 
+## 회로 그림 (Tinkercad)
+
+선 색: **빨강 = 5V**, **검정 = GND**, **초록 = 신호선**. LED 저항은 220Ω, 풀업/풀다운 저항은 10kΩ, 네오픽셀 저항은 330Ω입니다.
+
+### LED
+
+| `blink`, `led_pin3` — D3 LED 1개 | `alternate_blink` — D3, D4 LED 2개 |
+|---|---|
+| ![D3 LED](docs/images/led_d3.png) | ![D3 D4 LED](docs/images/leds_d3_d4.png) |
+
+| `chase`, `traffic_light` — D3(빨강), D4(노랑), D5(초록) |
+|---|
+| ![D3 D4 D5 LED](docs/images/leds_d3_d4_d5.png) |
+
+### 가변저항
+
+| `potentiometer` — A5 | `two_potentiometers` — A4, A5 |
+|---|---|
+| ![가변저항 A5](docs/images/potentiometer_a5.png) | ![가변저항 A4 A5](docs/images/potentiometers_a4_a5.png) |
+
+### 버튼
+
+| `button_pullup` — 외부 풀업 (D2 ─ 10kΩ ─ 5V, 버튼 ↔ GND) | `button_pulldown` — 외부 풀다운 (D2 ─ 10kΩ ─ GND, 버튼 ↔ 5V) |
+|---|---|
+| ![풀업](docs/images/button_pullup.png) | ![풀다운](docs/images/button_pulldown.png) |
+
+| `button_internal_pullup` — A0 버튼 (내부 풀업) | `button_counter`, `button_gesture` — A0 버튼 + A5 LED |
+|---|---|
+| ![A0 버튼](docs/images/button_a0.png) | ![A0 버튼 A5 LED](docs/images/button_a0_led_a5.png) |
+
+| `button_toggle`, `button_interrupt` — D2 버튼(내부 풀업) + D3 LED |
+|---|
+| ![D2 버튼 D3 LED](docs/images/button_d2_led_d3.png) |
+
+### 네오픽셀
+
+| `neopixel_basic` — D6 ─ 330Ω ─ DIN, 5V, GND |
+|---|
+| ![네오픽셀](docs/images/neopixel_d6.png) |
+
+> Tinkercad는 네오픽셀 스트립의 5V·GND 선 끝을 첫 번째 픽셀 옆에 그려 줍니다. 실제로는 스트립 왼쪽 끝의 `+5V`, `GND` 패드에 연결된 것입니다 (구조도 화면에서 확인).
+
+---
+
 ## 1. 회로 결선 기본
 
 ### 브레드보드 구조
